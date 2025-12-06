@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TP6 – Mini Calculatrice Web</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <h1>Mini Calculatrice – TP 6</h1>
+
+    <p class="subtitle">Réalisé par <strong>Fadl-Allah</strong></p>
+  </header>
+
+  <main class="container">
+
+    <section class="card">
+      <h2>Calculatrice locale</h2>
+      <p>Entrez deux nombres, choisissez une opération puis cliquez sur <strong>Calculer</strong>.</p>
+
+      <form id="calc-form">
+
+        <div class="form-group">
+          <label for="nombreA">Nombre A :</label>
+          <input type="number" id="nombreA" name="nombreA" placeholder="Ex : 10">
+        </div>
+
+        <div class="form-group">
+          <label for="nombreB">Nombre B :</label>
+          <input type="number" id="nombreB" name="nombreB" placeholder="Ex : 5">
+        </div>
+
+        <div class="form-group">
+          <label for="operation">Opération :</label>
+          <select id="operation" name="operation">
+            <option value="">-- Choisir une opération --</option>
+            <option value="+">Addition (+)</option>
+            <option value="-">Soustraction (-)</option>
+            <option value="*">Multiplication (×)</option>
+            <option value="/">Division (÷)</option>
+          </select>
+        </div>
+
+        <button type="submit" class="btn-primary">Calculer</button>
+      </form>
+
+      <div id="error-box" class="error-box" aria-live="polite"></div>
+
+      <div id="result-box" class="result-box">
+        <strong>Résultat :</strong> <span id="result-content">–</span>
+      </div>
+    </section>
+
+    <section class="card history-card">
+      <h2>Historique des opérations</h2>
+      <p class="small-text">Les opérations validées apparaîtront ici.</p>
+
+      <ul id="history-list" class="history-list">
+
+      </ul>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <p>TP 6 – par Fadl-allah <a href="info.php">Voir la page PHP</a></p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
